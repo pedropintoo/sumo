@@ -10,13 +10,13 @@
     <vType id="customType"/>
     <!-- Vehicles, persons and containers (sorted by depart) -->
     <container id="c_0" depart="0.00">
-        <walk from="Edge0" containerStop="containerStopA"/>
+        <transport from="Edge0" containerStop="containerStopA"/>
         <tranship to="EdgeCenter0" modes="public" lines="Line1" vTypes="type1"/>
     </container>
 
     <!-- Vehicles, persons and containers (sorted by depart) -->
     <container id="c_1" depart="0.00">
-        <walk from="EdgeCenter0" containerStop="containerStopB"/>
+        <transport from="EdgeCenter0" containerStop="containerStopB"/>
         <tranship to="Edge5" modes="car" lines="Line2" vTypes="type2"/>
     </container>
 </routes>
