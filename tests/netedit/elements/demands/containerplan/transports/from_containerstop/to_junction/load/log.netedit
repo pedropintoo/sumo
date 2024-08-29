@@ -1,1 +1,1 @@
-Warning: Invalid to junction 'dummy' used in containertrip: containerstop->junction of container 'c_0'
+Warning: Invalid to junction 'dummy' used in transport: containerstop->junction of container 'c_0'

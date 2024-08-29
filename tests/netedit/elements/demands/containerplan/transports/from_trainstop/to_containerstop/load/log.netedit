@@ -1,1 +1,1 @@
-Warning: Invalid to container stop 'dummy' used in containertrip: trainstop->containerstop of container 'c_0'
+Warning: Invalid to container stop 'dummy' used in transport: trainstop->containerstop of container 'c_0'

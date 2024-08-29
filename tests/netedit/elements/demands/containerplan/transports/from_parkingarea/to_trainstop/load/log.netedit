@@ -1,1 +1,1 @@
-Warning: Invalid to train stop 'dummy' used in containertrip: parkingarea->trainstop of container 'c_0'
+Warning: Invalid to train stop 'dummy' used in transport: parkingarea->trainstop of container 'c_0'

@@ -1,1 +1,1 @@
-Warning: Invalid to bus stop 'dummy' used in containertrip: junction->busstop of container 'c_0'
+Warning: Invalid to bus stop 'dummy' used in transport: junction->busstop of container 'c_0'

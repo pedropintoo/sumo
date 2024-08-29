@@ -1,1 +1,1 @@
-Warning: Invalid to parking area 'dummy' used in containertrip: busstop->parkingarea of container 'c_0'
+Warning: Invalid to parking area 'dummy' used in transport: busstop->parkingarea of container 'c_0'
