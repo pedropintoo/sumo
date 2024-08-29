@@ -32,7 +32,7 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 netedit.supermodeDemand()
 
 # select two-way mode
-netedit.changeEditMode(netedit.attrs.modes.demand.showPersonPlans)
+netedit.changeEditMode(netedit.attrs.modes.demand.showContainerPlans)
 
 # go to select mode
 netedit.selectMode()
@@ -47,7 +47,7 @@ netedit.inspectMode()
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.planEdge2Ped)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.personTrip.edge.edge.inspectSelection.vTypes, "customType", False)
+netedit.modifyAttribute(netedit.attrs.containerTrip.edge.edge.inspectSelection.vTypes, "customType", False)
 
 # Check undo redo
 netedit.checkUndoRedo(referencePosition)

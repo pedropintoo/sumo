@@ -32,7 +32,7 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 netedit.supermodeDemand()
 
 # select two-way mode
-netedit.changeEditMode(netedit.attrs.modes.demand.showPersonPlans)
+netedit.changeEditMode(netedit.attrs.modes.demand.showContainerPlans)
 
 # go to select mode
 netedit.selectMode()
@@ -47,16 +47,16 @@ netedit.inspectMode()
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.planEdge2Ped)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.personTrip.edge.edge.inspectSelection.arrivalPos, "dummy", False)
+netedit.modifyAttribute(netedit.attrs.containerTrip.edge.edge.inspectSelection.arrivalPos, "dummy", False)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.personTrip.edge.edge.inspectSelection.arrivalPos, "", False)
+netedit.modifyAttribute(netedit.attrs.containerTrip.edge.edge.inspectSelection.arrivalPos, "", False)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.personTrip.edge.edge.inspectSelection.arrivalPos, "-6", False)
+netedit.modifyAttribute(netedit.attrs.containerTrip.edge.edge.inspectSelection.arrivalPos, "-6", False)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.personTrip.edge.edge.inspectSelection.arrivalPos, "2.5", False)
+netedit.modifyAttribute(netedit.attrs.containerTrip.edge.edge.inspectSelection.arrivalPos, "2.5", False)
 
 # Check undo redo
 netedit.checkUndoRedo(referencePosition)

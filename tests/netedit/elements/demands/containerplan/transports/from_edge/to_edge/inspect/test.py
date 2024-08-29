@@ -31,11 +31,11 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change person plan
-netedit.changePersonPlan("walk", False)
+# change container plan
+netedit.changeContainerPlan("walk", False)
 
 # create route using one edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
@@ -43,13 +43,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 # press enter to create route
 netedit.typeEnter()
 
-# go to personTrip.edge.edge mode
-netedit.personPlanMode()
+# go to containerTrip.edge.edge mode
+netedit.containerPlanMode()
 
-# go to personTrip.edge.edge mode
-netedit.changePersonPlanMode("personTrip")
+# go to containerTrip.edge.edge mode
+netedit.changeContainerPlanMode("containerTrip")
 
-# create personTrip.edge.edge
+# create containerTrip.edge.edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
 # press enter to create route
@@ -62,16 +62,16 @@ netedit.inspectMode()
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.planEdge2Ped)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.personTrip.edge.edge.inspect.arrivalPos, "dummy", False)
+netedit.modifyAttribute(netedit.attrs.containerTrip.edge.edge.inspect.arrivalPos, "dummy", False)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.personTrip.edge.edge.inspect.arrivalPos, "", False)
+netedit.modifyAttribute(netedit.attrs.containerTrip.edge.edge.inspect.arrivalPos, "", False)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.personTrip.edge.edge.inspect.arrivalPos, "-6", False)
+netedit.modifyAttribute(netedit.attrs.containerTrip.edge.edge.inspect.arrivalPos, "-6", False)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.personTrip.edge.edge.inspect.arrivalPos, "2.5", False)
+netedit.modifyAttribute(netedit.attrs.containerTrip.edge.edge.inspect.arrivalPos, "2.5", False)
 
 # Check undo redo
 netedit.checkUndoRedo(referencePosition)

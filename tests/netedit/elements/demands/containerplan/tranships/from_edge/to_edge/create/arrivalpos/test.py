@@ -31,11 +31,11 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change person plan
-netedit.changePersonPlan("walk", False)
+# change container plan
+netedit.changeContainerPlan("walk", False)
 
 # create route using one edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
@@ -43,23 +43,23 @@ netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 # press enter to create route
 netedit.typeEnter()
 
-# go to personTrip.edge.edge mode
-netedit.personPlanMode()
+# go to containerTrip.edge.edge mode
+netedit.containerPlanMode()
 
-# go to personTrip.edge.edge mode
-netedit.changePersonPlanMode("personTrip")
+# go to containerTrip.edge.edge mode
+netedit.changeContainerPlanMode("containerTrip")
 
-# create personTrip.edge.edge
+# create containerTrip.edge.edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
-# set invalid person number
-netedit.changeDefaultValue(netedit.attrs.personTrip.edge.edge.create.arrivalPos, "dummy")
+# set invalid container number
+netedit.changeDefaultValue(netedit.attrs.containerTrip.edge.edge.create.arrivalPos, "dummy")
 
 # press enter to create route
 netedit.typeEnter()
 
-# set invalid person number
-netedit.changeDefaultValue(netedit.attrs.personTrip.edge.edge.create.arrivalPos, "12.5")
+# set invalid container number
+netedit.changeDefaultValue(netedit.attrs.containerTrip.edge.edge.create.arrivalPos, "12.5")
 
 # press enter to create route
 netedit.typeEnter()

@@ -31,11 +31,11 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change person plan
-netedit.changePersonPlan("personTrip", False)
+# change container plan
+netedit.changeContainerPlan("containerTrip", False)
 
 # create route using one edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
@@ -44,13 +44,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.charging
 # press enter to create route
 netedit.typeEnter()
 
-# go to personTrip.trainStop.trainStop mode
-netedit.personPlanMode()
+# go to containerTrip.trainStop.trainStop mode
+netedit.containerPlanMode()
 
-# go to personTrip.trainStop.trainStop mode
-netedit.changePersonPlanMode("personTrip")
+# go to containerTrip.trainStop.trainStop mode
+netedit.changeContainerPlanMode("containerTrip")
 
-# create personTrip.trainStop.trainStop
+# create containerTrip.trainStop.trainStop
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.trainStopB)
 
 # press enter to create route

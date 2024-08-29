@@ -9,13 +9,13 @@
     <vType id="type2"/>
     <vType id="customType"/>
     <!-- Vehicles, persons and containers (sorted by depart) -->
-    <person id="p_0" depart="0.00">
+    <container id="c_0" depart="0.00">
         <walk from="Edge0" toJunction="Junction1"/>
-        <personTrip to="Edge2" arrivalPos="25.00" modes="public" lines="Line1" vTypes="type1"/>
-    </person>
+        <containerTrip to="Edge2" arrivalPos="25.00" modes="public" lines="Line1" vTypes="type1"/>
+    </container>
 
-    <person id="p_1" depart="0.00">
+    <container id="c_1" depart="0.00">
         <walk from="EdgeBike0" toJunction="Junction5"/>
-        <personTrip to="Edge5" arrivalPos="11.00" modes="car" lines="Line2" vTypes="type2"/>
-    </person>
+        <containerTrip to="Edge5" arrivalPos="11.00" modes="car" lines="Line2" vTypes="type2"/>
+    </container>
 </routes>

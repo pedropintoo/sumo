@@ -31,11 +31,11 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change person plan
-netedit.changePersonPlan("Person Stop", False)
+# change container plan
+netedit.changeContainerPlan("Container Stop", False)
 
 # create route using one edge
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.parkingArea)
