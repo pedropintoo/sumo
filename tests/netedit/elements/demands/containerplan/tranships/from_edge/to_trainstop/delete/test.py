@@ -43,13 +43,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.edge.trainStop mode
+# go to tranship.edge.trainStop mode
 netedit.containerPlanMode()
 
-# go to containerTrip.edge.trainStop mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to tranship.edge.trainStop mode
+netedit.changeContainerPlanMode("tranship")
 
-# create containerTrip.edge.trainStop
+# create tranship.edge.trainStop
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.trainStop)
 
 # press enter to create route

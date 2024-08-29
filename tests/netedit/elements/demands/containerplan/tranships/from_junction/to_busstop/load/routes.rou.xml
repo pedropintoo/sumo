@@ -7,11 +7,11 @@
     <!-- Vehicles, persons and containers (sorted by depart) -->
     <container id="c_0" depart="0.00">
         <walk from="Edge0" toJunction="Junction1"/>
-        <containerTrip busStop="dummy" lines="ANY"/>
+        <tranship busStop="dummy" lines="ANY"/>
     </container>
 
     <container id="c_1" depart="0.00">
         <walk from="Edge0" toJunction="Junction1"/>
-        <containerTrip busStop="busStopA" lines="ANY"/>
+        <tranship busStop="busStopA" lines="ANY"/>
     </container>
 </routes>

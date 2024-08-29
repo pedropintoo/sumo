@@ -1,1 +1,1 @@
-Warning: Invalid to train stop 'dummy' used in containertrip: chargingstation->trainstop of container 'c_0'
+Warning: Invalid to train stop 'dummy' used in tranship: chargingstation->trainstop of container 'c_0'

@@ -44,23 +44,23 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.busStop.busStop mode
+# go to tranship.busStop.busStop mode
 netedit.containerPlanMode()
 
-# go to containerTrip.busStop.busStop mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to tranship.busStop.busStop mode
+netedit.changeContainerPlanMode("tranship")
 
-# create containerTrip.busStop.busStop
+# create tranship.busStop.busStop
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStopB)
 
 # set invalid container number
-netedit.changeDefaultValue(netedit.attrs.containerTrip.busStop.busStop.create.modes, "dummy")
+netedit.changeDefaultValue(netedit.attrs.tranship.busStop.busStop.create.modes, "dummy")
 
 # press enter to create route
 netedit.typeEnter()
 
 # set invalid container number
-netedit.changeDefaultValue(netedit.attrs.containerTrip.busStop.busStop.create.modes, "public")
+netedit.changeDefaultValue(netedit.attrs.tranship.busStop.busStop.create.modes, "public")
 
 # press enter to create route
 netedit.typeEnter()

@@ -7,6 +7,6 @@
     <!-- Vehicles, persons and containers (sorted by depart) -->
     <container id="c_0" depart="0.00">
         <walk from="Edge0" to="Edge0"/>
-        <containerTrip to="Edge2" lines="custom line"/>
+        <tranship to="Edge2" lines="custom line"/>
     </container>
 </routes>

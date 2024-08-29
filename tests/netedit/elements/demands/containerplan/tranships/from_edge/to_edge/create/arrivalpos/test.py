@@ -43,23 +43,23 @@ netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.edge.edge mode
+# go to tranship.edge.edge mode
 netedit.containerPlanMode()
 
-# go to containerTrip.edge.edge mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to tranship.edge.edge mode
+netedit.changeContainerPlanMode("tranship")
 
-# create containerTrip.edge.edge
+# create tranship.edge.edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
 # set invalid container number
-netedit.changeDefaultValue(netedit.attrs.containerTrip.edge.edge.create.arrivalPos, "dummy")
+netedit.changeDefaultValue(netedit.attrs.tranship.edge.edge.create.arrivalPos, "dummy")
 
 # press enter to create route
 netedit.typeEnter()
 
 # set invalid container number
-netedit.changeDefaultValue(netedit.attrs.containerTrip.edge.edge.create.arrivalPos, "12.5")
+netedit.changeDefaultValue(netedit.attrs.tranship.edge.edge.create.arrivalPos, "12.5")
 
 # press enter to create route
 netedit.typeEnter()

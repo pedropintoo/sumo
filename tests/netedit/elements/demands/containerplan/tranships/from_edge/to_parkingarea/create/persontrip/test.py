@@ -35,7 +35,7 @@ netedit.supermodeDemand()
 netedit.containerMode()
 
 # change container plan
-netedit.changeContainerPlan("containerTrip", False)
+netedit.changeContainerPlan("tranship", False)
 
 # create route using one edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
@@ -43,13 +43,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.parkingArea.parkingArea mode
+# go to tranship.parkingArea.parkingArea mode
 netedit.containerPlanMode()
 
-# go to containerTrip.parkingArea.parkingArea mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to tranship.parkingArea.parkingArea mode
+netedit.changeContainerPlanMode("tranship")
 
-# create containerTrip.parkingArea.parkingArea
+# create tranship.parkingArea.parkingArea
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.parkingAreaB)
 
 # press enter to create route

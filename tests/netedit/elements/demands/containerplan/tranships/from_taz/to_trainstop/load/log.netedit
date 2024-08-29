@@ -1,1 +1,1 @@
-Warning: Invalid to train stop 'dummy' used in containertrip: taz->trainstop of container 'c_0'
+Warning: Invalid to train stop 'dummy' used in tranship: taz->trainstop of container 'c_0'

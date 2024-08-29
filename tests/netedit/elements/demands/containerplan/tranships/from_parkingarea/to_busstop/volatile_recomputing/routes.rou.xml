@@ -7,7 +7,7 @@
     <!-- Vehicles, persons and containers (sorted by depart) -->
     <container id="c_0" depart="0.00">
         <walk from="Edge0" parkingArea="parkingAreaA"/>
-        <containerTrip busStop="busStopB"/>
-        <containerTrip busStop="busStopA"/>
+        <tranship busStop="busStopB"/>
+        <tranship busStop="busStopA"/>
     </container>
 </routes>

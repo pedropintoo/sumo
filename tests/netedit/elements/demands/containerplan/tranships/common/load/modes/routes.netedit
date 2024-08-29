@@ -17,10 +17,10 @@ SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-or-later
     <!-- Vehicles, persons and containers (sorted by depart) -->
     <container id="c_0" depart="0.00">
         <walk from="Edge0" to="Edge1"/>
-        <containerTrip to="Edge2"/>
+        <tranship to="Edge2"/>
     </container>
     <container id="c_1" depart="0.00">
         <walk from="Edge0" to="Edge1"/>
-        <containerTrip to="Edge2" modes="car"/>
+        <tranship to="Edge2" modes="car"/>
     </container>
 </routes>

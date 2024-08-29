@@ -1,1 +1,1 @@
-Warning: Invalid to junction 'dummy' used in containertrip: parkingarea->junction of container 'c_0'
+Warning: Invalid to junction 'dummy' used in tranship: parkingarea->junction of container 'c_0'

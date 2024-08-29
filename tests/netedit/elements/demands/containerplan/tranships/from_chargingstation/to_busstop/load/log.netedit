@@ -1,1 +1,1 @@
-Warning: Invalid to bus stop 'dummy' used in containertrip: chargingstation->busstop of container 'c_0'
+Warning: Invalid to bus stop 'dummy' used in tranship: chargingstation->busstop of container 'c_0'

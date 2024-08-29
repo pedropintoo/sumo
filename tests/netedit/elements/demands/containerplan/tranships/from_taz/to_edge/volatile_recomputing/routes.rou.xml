@@ -7,7 +7,7 @@
     <!-- Vehicles, persons and containers (sorted by depart) -->
     <container id="c_0" depart="0.00">
         <walk from="Edge0" toTaz="taz_red"/>
-        <containerTrip to="Edge2"/>
-        <containerTrip to="EdgeCenter0"/>
+        <tranship to="Edge2"/>
+        <tranship to="EdgeCenter0"/>
     </container>
 </routes>

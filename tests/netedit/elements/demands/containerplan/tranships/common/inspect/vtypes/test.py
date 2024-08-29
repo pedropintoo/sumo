@@ -43,13 +43,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.edge.edge mode
+# go to tranship.edge.edge mode
 netedit.containerPlanMode()
 
-# go to containerTrip.edge.edge mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to tranship.edge.edge mode
+netedit.changeContainerPlanMode("tranship")
 
-# create containerTrip.edge.edge
+# create tranship.edge.edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
 # press enter to create route
@@ -62,7 +62,7 @@ netedit.inspectMode()
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.planEdge2Ped)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.containerTrip.edge.edge.inspect.vTypes, "customType", False)
+netedit.modifyAttribute(netedit.attrs.tranship.edge.edge.inspect.vTypes, "customType", False)
 
 # Check undo redo
 netedit.checkUndoRedo(referencePosition)
