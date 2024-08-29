@@ -49,6 +49,7 @@
 #include "MSDevice_Taxi.h"
 
 //#define DEBUG_DISPATCH
+//#define DEBUG_CANCEL
 
 //#define DEBUG_COND (myHolder.isSelected())
 #define DEBUG_COND (true)
@@ -535,21 +536,19 @@ MSDevice_Taxi::cancelCurrentCustomers() {
     }
     // find customers of the current stop
     std::set<const MSTransportable*> customersToBeRemoved;
+    std::set<const MSTransportable*> onBoard;
+    onBoard.insert(myHolder.getPersons().begin(), myHolder.getPersons().end());
+    onBoard.insert(myHolder.getContainers().begin(), myHolder.getContainers().end());
     for (std::string tID : myHolder.getNextStopParameter()->permitted) {
-        //for (const MSTransportable* t : myCustomers) {
         for (auto t : myCustomers) {
-            //bool removed = false;
-            //if (t->getID() == tID) {
-            if (t->getID() == tID) {
-                //cancelCustomer(t);
+            if (t->getID() == tID && onBoard.count(t) == 0) {
                 customersToBeRemoved.insert(t);
-                //removed = cancelCustomer((*tIt));
-
             }
-            //if (!removed) {
-            //    tIt++;
-            //}
         }
+    }
+    if (!customersToBeRemoved.empty()) {
+        WRITE_WARNINGF(TL("Taxi '%' aborts waiting for customers: % at time=%."),
+                myHolder.getID(), toString(customersToBeRemoved), time2string(SIMSTEP));
     }
     for (auto t : customersToBeRemoved) {
         cancelCustomer(t);
@@ -559,6 +558,12 @@ MSDevice_Taxi::cancelCurrentCustomers() {
 
 bool
 MSDevice_Taxi::cancelCustomer(const MSTransportable* t) {
+#ifdef DEBUG_CANCEL
+    if (DEBUG_COND) {
+        std::cout << SIMTIME << " taxi=" << myHolder.getID() << " cancelCustomer " << t->getID() << "\n";
+    }
+#endif
+
     // is the given transportable a customer of the reservations?
     if (myCustomers.count(t) == 0) {
         return false;
