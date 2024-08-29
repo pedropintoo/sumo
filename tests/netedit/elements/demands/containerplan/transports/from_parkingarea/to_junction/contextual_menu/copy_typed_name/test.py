@@ -45,13 +45,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.parkingA
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.busStop.busStop mode
+# go to transport.busStop.busStop mode
 netedit.containerPlanMode()
 
-# go to containerTrip.busStop.busStop mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to transport.busStop.busStop mode
+netedit.changeContainerPlanMode("transport")
 
-# create containerTrip.busStop.busStop
+# create transport.busStop.busStop
 netedit.leftClick(referencePosition, netedit.positions.elements.junction4)
 
 # press enter to create route

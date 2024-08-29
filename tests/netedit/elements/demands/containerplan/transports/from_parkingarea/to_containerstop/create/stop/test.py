@@ -43,13 +43,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.parkingA
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.containerStop.containerStop mode
+# go to transport.containerStop.containerStop mode
 netedit.containerPlanMode()
 
-# go to containerTrip.containerStop.containerStop mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to transport.containerStop.containerStop mode
+netedit.changeContainerPlanMode("transport")
 
-# create containerTrip.containerStop.containerStop
+# create transport.containerStop.containerStop
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.containerStopB)
 
 # press enter to create route

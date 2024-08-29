@@ -44,23 +44,23 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.charging
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.busStop.edge mode
+# go to transport.busStop.edge mode
 netedit.containerPlanMode()
 
-# go to containerTrip.busStop.edge mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to transport.busStop.edge mode
+netedit.changeContainerPlanMode("transport")
 
-# create containerTrip.busStop.edge
+# create transport.busStop.edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edgeCenter0)
 
 # set invalid container number
-netedit.changeDefaultValue(netedit.attrs.containerTrip.busStop.edge.create.arrivalPos, "dummy")
+netedit.changeDefaultValue(netedit.attrs.transport.busStop.edge.create.arrivalPos, "dummy")
 
 # press enter to create route
 netedit.typeEnter()
 
 # set invalid container number
-netedit.changeDefaultValue(netedit.attrs.containerTrip.busStop.edge.create.arrivalPos, "12.5")
+netedit.changeDefaultValue(netedit.attrs.transport.busStop.edge.create.arrivalPos, "12.5")
 
 # press enter to create route
 netedit.typeEnter()

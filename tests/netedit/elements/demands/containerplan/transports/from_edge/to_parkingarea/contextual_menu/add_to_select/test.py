@@ -43,13 +43,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.edge.parkingArea mode
+# go to transport.edge.parkingArea mode
 netedit.containerPlanMode()
 
-# go to containerTrip.edge.parkingArea mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to transport.edge.parkingArea mode
+netedit.changeContainerPlanMode("transport")
 
-# create containerTrip.edge.parkingArea
+# create transport.edge.parkingArea
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.parkingArea)
 
 # press enter to create route

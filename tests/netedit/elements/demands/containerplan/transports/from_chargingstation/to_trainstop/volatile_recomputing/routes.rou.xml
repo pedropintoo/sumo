@@ -7,7 +7,7 @@
     <!-- Vehicles, persons and containers (sorted by depart) -->
     <container id="c_0" depart="0.00">
         <walk from="Edge0" chargingStation="chargingStationA"/>
-        <containerTrip trainStop="trainStopB"/>
-        <containerTrip trainStop="trainStopA"/>
+        <transport trainStop="trainStopB"/>
+        <transport trainStop="trainStopA"/>
     </container>
 </routes>

@@ -43,13 +43,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.trainSto
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.trainStop.trainStop mode
+# go to transport.trainStop.trainStop mode
 netedit.containerPlanMode()
 
-# go to containerTrip.trainStop.trainStop mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to transport.trainStop.trainStop mode
+netedit.changeContainerPlanMode("transport")
 
-# create containerTrip.trainStop.trainStop
+# create transport.trainStop.trainStop
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.trainStopB)
 
 # press enter to create route

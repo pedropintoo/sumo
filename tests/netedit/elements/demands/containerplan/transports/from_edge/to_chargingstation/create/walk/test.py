@@ -43,13 +43,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.chargingStation.chargingStation mode
+# go to transport.chargingStation.chargingStation mode
 netedit.containerPlanMode()
 
-# go to containerTrip.chargingStation.chargingStation mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to transport.chargingStation.chargingStation mode
+netedit.changeContainerPlanMode("transport")
 
-# create containerTrip.chargingStation.chargingStation
+# create transport.chargingStation.chargingStation
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.chargingStationB)
 
 # press enter to create route

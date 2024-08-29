@@ -44,13 +44,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.junction1)
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.junction.edge mode
+# go to transport.junction.edge mode
 netedit.containerPlanMode()
 
-# go to containerTrip.junction.edge mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to transport.junction.edge mode
+netedit.changeContainerPlanMode("transport")
 
-# create containerTrip.junction.edge
+# create transport.junction.edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
 # press enter to create route

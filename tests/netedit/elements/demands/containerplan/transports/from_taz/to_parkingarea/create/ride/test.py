@@ -44,13 +44,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.TAZRed)
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.parkingArea.parkingArea mode
+# go to transport.parkingArea.parkingArea mode
 netedit.containerPlanMode()
 
-# go to containerTrip.parkingArea.parkingArea mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to transport.parkingArea.parkingArea mode
+netedit.changeContainerPlanMode("transport")
 
-# create containerTrip.parkingArea.parkingArea
+# create transport.parkingArea.parkingArea
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.parkingArea)
 
 # press enter to create route

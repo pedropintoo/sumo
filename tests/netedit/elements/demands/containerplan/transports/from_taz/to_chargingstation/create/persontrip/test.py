@@ -35,7 +35,7 @@ netedit.supermodeDemand()
 netedit.containerMode()
 
 # change container plan
-netedit.changeContainerPlan("containerTrip", False)
+netedit.changeContainerPlan("transport", False)
 
 # create route using one edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
@@ -44,13 +44,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.TAZRed)
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.chargingStation.chargingStation mode
+# go to transport.chargingStation.chargingStation mode
 netedit.containerPlanMode()
 
-# go to containerTrip.chargingStation.chargingStation mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to transport.chargingStation.chargingStation mode
+netedit.changeContainerPlanMode("transport")
 
-# create containerTrip.chargingStation.chargingStation
+# create transport.chargingStation.chargingStation
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.chargingStation)
 
 # press enter to create route

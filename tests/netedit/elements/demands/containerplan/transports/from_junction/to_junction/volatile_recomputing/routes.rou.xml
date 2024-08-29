@@ -7,7 +7,7 @@
     <!-- Vehicles, persons and containers (sorted by depart) -->
     <container id="c_0" depart="0.00">
         <walk from="Edge0" toJunction="Junction1"/>
-        <containerTrip toJunction="Junction3"/>
-        <containerTrip toJunction="Junction5"/>
+        <transport toJunction="Junction3"/>
+        <transport toJunction="Junction5"/>
     </container>
 </routes>

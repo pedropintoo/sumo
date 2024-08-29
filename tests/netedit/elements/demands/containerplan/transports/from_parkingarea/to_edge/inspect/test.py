@@ -44,13 +44,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.parkingA
 # press enter to create route
 netedit.typeEnter()
 
-# go to containerTrip.busStop.edge mode
+# go to transport.busStop.edge mode
 netedit.containerPlanMode()
 
-# go to containerTrip.busStop.edge mode
-netedit.changeContainerPlanMode("containerTrip")
+# go to transport.busStop.edge mode
+netedit.changeContainerPlanMode("transport")
 
-# create containerTrip.busStop.edge
+# create transport.busStop.edge
 netedit.leftClick(referencePosition, netedit.positions.elements.edgeCenter0)
 
 # press enter to create route
@@ -63,16 +63,16 @@ netedit.inspectMode()
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.planEdgeBike0Ped)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.containerTrip.busStop.edge.inspect.arrivalPos, "dummy", False)
+netedit.modifyAttribute(netedit.attrs.transport.busStop.edge.inspect.arrivalPos, "dummy", False)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.containerTrip.busStop.edge.inspect.arrivalPos, "", False)
+netedit.modifyAttribute(netedit.attrs.transport.busStop.edge.inspect.arrivalPos, "", False)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.containerTrip.busStop.edge.inspect.arrivalPos, "-6", False)
+netedit.modifyAttribute(netedit.attrs.transport.busStop.edge.inspect.arrivalPos, "-6", False)
 
 # change depart with an invalid value
-netedit.modifyAttribute(netedit.attrs.containerTrip.busStop.edge.inspect.arrivalPos, "2.5", False)
+netedit.modifyAttribute(netedit.attrs.transport.busStop.edge.inspect.arrivalPos, "2.5", False)
 
 # Check undo redo
 netedit.checkUndoRedo(referencePosition)
