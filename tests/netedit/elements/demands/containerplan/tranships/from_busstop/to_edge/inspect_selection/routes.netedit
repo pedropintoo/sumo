@@ -21,10 +21,10 @@ SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-or-later
     <!-- Vehicles, persons and containers (sorted by depart) -->
     <container id="c_0" depart="0.00">
         <transport from="Edge0" busStop="busStopA"/>
-        <tranship to="EdgeCenter0" arrivalPos="2.50" modes="public" lines="Line1" vTypes="type1"/>
+        <tranship to="EdgeCenter0" arrivalPos="2.50" lines="Line1"/>
     </container>
     <container id="c_1" depart="0.00">
         <transport from="EdgeCenter0" busStop="busStopB"/>
-        <tranship to="Edge5" arrivalPos="2.50" modes="car" lines="Line2" vTypes="type2"/>
+        <tranship to="Edge5" arrivalPos="2.50" lines="Line2"/>
     </container>
 </routes>
