@@ -31,18 +31,18 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change person plan
-netedit.changePersonPlan("walk", False)
+# change container plan
+netedit.changeContainerPlan("tranship", False)
 
 # create route using edge and busStop
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 
-# set invalid person number
-netedit.changeColorUsingDialog(netedit.attrs.person.create.colorButton, 5)
+# set invalid container number
+netedit.changeColorUsingDialog(netedit.attrs.container.create.colorButton, 5)
 
 # press enter to create route
 netedit.typeEnter()
@@ -51,14 +51,14 @@ netedit.typeEnter()
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 
-# set invalid person number
-netedit.changeDefaultValue(netedit.attrs.person.create.color, "Vlue")
+# set invalid container number
+netedit.changeDefaultValue(netedit.attrs.container.create.color, "Vlue")
 
 # press enter to create route
 netedit.typeEnter()
 
-# set invalid person number
-netedit.changeDefaultValue(netedit.attrs.person.create.color, "red")
+# set invalid container number
+netedit.changeDefaultValue(netedit.attrs.container.create.color, "red")
 
 # press enter to create route
 netedit.typeEnter()

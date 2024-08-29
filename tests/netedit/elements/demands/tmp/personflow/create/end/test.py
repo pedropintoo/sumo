@@ -31,27 +31,27 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change Person
-netedit.changeElement("personFlow")
+# change Container
+netedit.changeElement("containerFlow")
 
-# change person plan
-netedit.changePersonPlan("walk", True)
-
-# set invalid arrival pos
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.terminate, "dummyTerminate")
-
-# create route using edge and busStop
-netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
-
-# press enter to create route
-netedit.typeEnter()
+# change container plan
+netedit.changeContainerPlan("tranship", True)
 
 # set invalid arrival pos
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.terminate, "end")
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.terminate, "dummyTerminate")
+
+# create route using edge and busStop
+netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
+
+# press enter to create route
+netedit.typeEnter()
+
+# set invalid arrival pos
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.terminate, "end")
 
 # press enter to create route
 netedit.typeEnter()
@@ -61,19 +61,19 @@ netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 
 # set valid arrival pos
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.terminateOption, "dummy")
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.terminateOption, "dummy")
 
 # press enter to create route
 netedit.typeEnter()
 
 # set valid arrival pos
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.terminateOption, "-30")
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.terminateOption, "-30")
 
 # press enter to create route
 netedit.typeEnter()
 
 # set valid arrival pos
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.terminateOption, "20.5")
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.terminateOption, "20.5")
 
 # press enter to create route
 netedit.typeEnter()
@@ -83,7 +83,7 @@ netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 
 # set valid arrival pos
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.terminateOption, "22")
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.terminateOption, "22")
 
 # press enter to create route
 netedit.typeEnter()

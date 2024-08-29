@@ -40,15 +40,15 @@ netedit.selectionInvert()
 # go to inspect mode
 netedit.inspectMode()
 
-# inspect person
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.person)
+# inspect container
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.container)
 
 # check parameters
-netedit.checkParameters(referencePosition, netedit.attrs.personFlow.inspectSelection.parameters, False)
+netedit.checkParameters(referencePosition, netedit.attrs.containerFlow.inspectSelection.parameters, False)
 
 # save Netedit config
 netedit.saveNeteditConfig(referencePosition)
 
-# save persons
+# save containers
 # quit netedit
 netedit.quit(neteditProcess)

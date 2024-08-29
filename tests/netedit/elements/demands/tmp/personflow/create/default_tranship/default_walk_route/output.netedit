@@ -4,8 +4,8 @@ TestFunctions: 'reference.png' found. Position: 304 - 168
 TestFunctions: Clicked over position 685 - 611
 TestFunctions: Clicked over position 1154 - 390
 TestFunctions: Clicked over position 798 - 194
-personFlow
-walk (route)
+containerFlow
+tranship (route)
 TestFunctions: Clicked over position 685 - 611
 TestFunctions: Clicked over position 304 - 168
 TestFunctions: Clicked over position 304 - 168

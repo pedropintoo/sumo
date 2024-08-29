@@ -40,20 +40,20 @@ netedit.selectionInvert()
 # go to inspect mode
 netedit.inspectMode()
 
-# inspect person
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.person)
+# inspect container
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.container)
 
 # change departLane with an invalid value
-netedit.modifyAttribute(netedit.attrs.person.inspectSelection.departPos, "", False)
+netedit.modifyAttribute(netedit.attrs.container.inspectSelection.departPos, "", False)
 
 # change departLane with an invalid value
-netedit.modifyAttribute(netedit.attrs.person.inspectSelection.departPos, "dummyPos", False)
+netedit.modifyAttribute(netedit.attrs.container.inspectSelection.departPos, "dummyPos", False)
 
 # change departLane with an invalid value
-netedit.modifyAttribute(netedit.attrs.person.inspectSelection.departPos, "500", False)
+netedit.modifyAttribute(netedit.attrs.container.inspectSelection.departPos, "500", False)
 
 # change departLane with a valid value
-netedit.modifyAttribute(netedit.attrs.person.inspectSelection.departPos, "20", False)
+netedit.modifyAttribute(netedit.attrs.container.inspectSelection.departPos, "20", False)
 
 # Check undo
 netedit.checkUndoRedo(referencePosition)
@@ -61,6 +61,6 @@ netedit.checkUndoRedo(referencePosition)
 # save Netedit config
 netedit.saveNeteditConfig(referencePosition)
 
-# save persons
+# save containers
 # quit netedit
 netedit.quit(neteditProcess)

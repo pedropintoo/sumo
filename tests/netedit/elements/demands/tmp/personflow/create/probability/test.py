@@ -31,17 +31,17 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change Person
-netedit.changeElement("personFlow")
+# change Container
+netedit.changeElement("containerFlow")
 
-# change person plan
-netedit.changePersonPlan("walk", True)
+# change container plan
+netedit.changeContainerPlan("tranship", True)
 
 # set invalid arrival pos
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.spacing, "dummySpacing")
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.spacing, "dummySpacing")
 
 # create route using edge and busStop
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
@@ -51,13 +51,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 netedit.typeEnter()
 
 # set invalid arrival pos
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.spacing, "personsPerHour")
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.spacing, "containersPerHour")
 
 # press enter to create flow
 netedit.typeEnter()
 
 # set valid arrival pos
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.spacingOption, "dummy")
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.spacingOption, "dummy")
 
 # create flow
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
@@ -67,19 +67,19 @@ netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 netedit.typeEnter()
 
 # set valid arrival pos
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.spacingOption, "-30")
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.spacingOption, "-30")
 
 # press enter to create route
 netedit.typeEnter()
 
 # set valid arrival pos
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.spacingOption, "20.5")
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.spacingOption, "20.5")
 
 # press enter to create route
 netedit.typeEnter()
 
 # set valid arrival pos
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.spacingOption, "22")
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.spacingOption, "22")
 
 # create flow
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)

@@ -40,23 +40,23 @@ netedit.selectionInvert()
 # go to inspect mode
 netedit.inspectMode()
 
-# inspect person
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.person)
+# inspect container
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.container)
 
 # change flow value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspectSelection.spacing, "dummyTerminate", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspectSelection.spacing, "dummyTerminate", False)
 
 # change flow value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspectSelection.spacing, "period", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspectSelection.spacing, "period", False)
 
 # change flow value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspectSelection.spacingOption, "dummy", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspectSelection.spacingOption, "dummy", False)
 
 # change flow value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspectSelection.spacingOption, "12.5", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspectSelection.spacingOption, "12.5", False)
 
 # change flow value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspectSelection.spacingOption, "26", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspectSelection.spacingOption, "26", False)
 
 # Check undo redo
 netedit.checkUndoRedo(referencePosition)
@@ -64,6 +64,6 @@ netedit.checkUndoRedo(referencePosition)
 # save Netedit config
 netedit.saveNeteditConfig(referencePosition)
 
-# save persons
+# save containers
 # quit netedit
 netedit.quit(neteditProcess)

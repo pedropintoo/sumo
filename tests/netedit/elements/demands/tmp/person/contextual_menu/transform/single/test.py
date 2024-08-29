@@ -31,22 +31,22 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# create person using three edges
+# create container using three edges
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
-# press enter to create person
+# press enter to create container
 netedit.typeEnter()
 
 # go to inspect mode
 netedit.inspectMode()
 
 # transform
-netedit.contextualMenuOperation(referencePosition, netedit.positions.elements.demands.person,
-                                netedit.contextualMenu.vehicles.transformPerson)
+netedit.contextualMenuOperation(referencePosition, netedit.positions.elements.demands.container,
+                                netedit.contextualMenu.vehicles.transformContainer)
 
 # Check undos
 netedit.undo(referencePosition, 2)

@@ -42,13 +42,13 @@ netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 # press enter to create route
 netedit.typeEnter()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change person plan
-netedit.changePersonPlan("walk (route)", False)
+# change container plan
+netedit.changeContainerPlan("tranship (route)", False)
 
-# create person
+# create container
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 
 # press enter to create route

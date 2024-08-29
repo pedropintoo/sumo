@@ -31,8 +31,8 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
 # create route using three edges
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
@@ -42,16 +42,16 @@ netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 # press enter to create route
 netedit.typeEnter()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change Person
-netedit.changeElement("personFlow")
+# change Container
+netedit.changeElement("containerFlow")
 
-# change person plan
-netedit.changePersonPlan("walk (route)", True)
+# change container plan
+netedit.changeContainerPlan("tranship (route)", True)
 
-# create person
+# create container
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 
 # press enter to create route

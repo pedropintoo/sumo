@@ -31,24 +31,24 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change Person
-netedit.changeElement("personFlow")
+# change Container
+netedit.changeElement("containerFlow")
 
-# create person using three edges
+# create container using three edges
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
-# press enter to create person
+# press enter to create container
 netedit.typeEnter()
 
 # go to delete mode
 netedit.deleteMode()
 
-# delete person
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.person)
+# delete container
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.container)
 
 # Check undo
 netedit.undo(referencePosition, 1)
@@ -68,7 +68,7 @@ netedit.waitDeleteWarning()
 # disable protect demand elemnts
 netedit.protectElements(referencePosition)
 
-# now delete edge with their person
+# now delete edge with their container
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 
 # Check undo
@@ -77,6 +77,6 @@ netedit.checkUndoRedo(referencePosition)
 # save Netedit config
 netedit.saveNeteditConfig(referencePosition)
 
-# save persons
+# save containers
 # quit netedit
 netedit.quit(neteditProcess)

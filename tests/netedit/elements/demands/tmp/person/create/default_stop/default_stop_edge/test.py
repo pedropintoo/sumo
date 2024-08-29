@@ -31,11 +31,11 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change person plan
-netedit.changePersonPlan("stop", False)
+# change container plan
+netedit.changeContainerPlan("stop", False)
 
 # create stop clicking over lane
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)

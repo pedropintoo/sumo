@@ -4,28 +4,28 @@
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <!-- Vehicles, persons and containers (sorted by depart) -->
-    <personFlow id="p_0" begin="0.00" end="23.00" personsPerHour="1200.00">
-        <personTrip from="Edge0" to="Edge2"/>
-    </personFlow>
+    <!-- Vehicles, containers and containers (sorted by depart) -->
+    <containerFlow id="c_0" begin="0.00" end="23.00" containersPerHour="1200.00">
+        <tranship from="Edge0" to="Edge2"/>
+    </containerFlow>
 
-    <personFlow id="p_1" departPos="" begin="1.00" end="23.00" personsPerHour="1200.00">
-        <personTrip from="Edge0" to="Edge2"/>
-    </personFlow>
+    <containerFlow id="c_1" departPos="" begin="1.00" end="23.00" containersPerHour="1200.00">
+        <tranship from="Edge0" to="Edge2"/>
+    </containerFlow>
 
-    <personFlow id="p_2" departPos="dummy" begin="2.00" end="23.00" personsPerHour="1200.00">
-        <personTrip from="Edge0" to="Edge2"/>
-    </personFlow>
+    <containerFlow id="c_2" departPos="dummy" begin="2.00" end="23.00" containersPerHour="1200.00">
+        <tranship from="Edge0" to="Edge2"/>
+    </containerFlow>
 
-    <personFlow id="p_3" departPos="-30.00" begin="3.00" end="23.00" personsPerHour="1200.00">
-        <personTrip from="Edge0" to="Edge2"/>
-    </personFlow>
+    <containerFlow id="c_3" departPos="-30.00" begin="3.00" end="23.00" containersPerHour="1200.00">
+        <tranship from="Edge0" to="Edge2"/>
+    </containerFlow>
 
-    <personFlow id="p_4" departPos="12.30" begin="4.00" end="23.00" personsPerHour="1200.00">
-        <personTrip from="Edge0" to="Edge2"/>
-    </personFlow>
+    <containerFlow id="c_4" departPos="12.30" begin="4.00" end="23.00" containersPerHour="1200.00">
+        <tranship from="Edge0" to="Edge2"/>
+    </containerFlow>
 
-    <personFlow id="p_5" departPos="8.00" begin="5.00" end="23.00" personsPerHour="1200.00">
-        <personTrip from="Edge0" to="Edge2"/>
-    </personFlow>
+    <containerFlow id="c_5" departPos="8.00" begin="5.00" end="23.00" containersPerHour="1200.00">
+        <tranship from="Edge0" to="Edge2"/>
+    </containerFlow>
 </routes>

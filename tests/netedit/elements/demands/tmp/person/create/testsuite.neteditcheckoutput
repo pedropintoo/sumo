@@ -1,8 +1,8 @@
-default_persontrip
+default_containertrip
 
-default_walk
+default_tranship
 
-default_ride
+default_transport
 
 default_stop
 

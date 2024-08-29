@@ -40,23 +40,23 @@ netedit.selectionInvert()
 # go to inspect mode
 netedit.inspectMode()
 
-# inspect person
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.person)
+# inspect container
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.container)
 
 # change color using dialog
-netedit.modifyColorAttribute(netedit.attrs.personFlow.inspectSelection.colorButton, 5, False)
+netedit.modifyColorAttribute(netedit.attrs.containerFlow.inspectSelection.colorButton, 5, False)
 
 # change color with an invalid value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspectSelection.color, "", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspectSelection.color, "", False)
 
 # change color with an invalid value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspectSelection.color, "dummyColor", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspectSelection.color, "dummyColor", False)
 
 # change color with an valid value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspectSelection.color, "cyan", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspectSelection.color, "cyan", False)
 
 # change color with a valid value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspectSelection.color, "12,13,14", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspectSelection.color, "12,13,14", False)
 
 # Check undo
 netedit.checkUndoRedo(referencePosition)
@@ -64,6 +64,6 @@ netedit.checkUndoRedo(referencePosition)
 # save Netedit config
 netedit.saveNeteditConfig(referencePosition)
 
-# save persons
+# save containers
 # quit netedit
 netedit.quit(neteditProcess)

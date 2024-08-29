@@ -31,24 +31,14 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change Person
-netedit.changeElement("personFlow")
+# change Container
+netedit.changeElement("containerFlow")
 
-# change person plan
-netedit.changePersonPlan("walk", True)
-
-# create route using edge and busStop
-netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
-
-# press enter to create route
-netedit.typeEnter()
-
-# set invalid personFlow number
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.id, ";;;;")
+# change container plan
+netedit.changeContainerPlan("tranship", True)
 
 # create route using edge and busStop
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
@@ -57,14 +47,24 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 # press enter to create route
 netedit.typeEnter()
 
-# set invalid personFlow number
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.id, "pf_0")
+# set invalid containerFlow number
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.id, ";;;;")
+
+# create route using edge and busStop
+netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 
 # press enter to create route
 netedit.typeEnter()
 
-# set invalid personFlow number
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.id, "customID")
+# set invalid containerFlow number
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.id, "pf_0")
+
+# press enter to create route
+netedit.typeEnter()
+
+# set invalid containerFlow number
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.id, "customID")
 
 # press enter to create route
 netedit.typeEnter()

@@ -4,17 +4,17 @@
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <!-- Vehicles, persons and containers (sorted by depart) -->
-    <personFlow id="p_0" begin="0.00" end="23.00" period="exp(1.00)">
-        <personTrip from="Edge0" to="Edge2"/>
-    </personFlow>
-    <personFlow id="p_5" begin="0.00" end="23.00" period="20.30">
-        <personTrip from="Edge0" to="Edge2"/>
-    </personFlow>
-    <personFlow id="p_6" begin="0.00" end="23.00" period="exp(2.30)">
-        <personTrip from="Edge0" to="Edge2"/>
-    </personFlow>
-    <personFlow id="p_7" begin="0.00" end="23.00" period="exp(1.70)">
-        <personTrip from="Edge0" to="Edge2"/>
-    </personFlow>
+    <!-- Vehicles, containers and containers (sorted by depart) -->
+    <containerFlow id="c_0" begin="0.00" end="23.00" period="exp(1.00)">
+        <tranship from="Edge0" to="Edge2"/>
+    </containerFlow>
+    <containerFlow id="c_5" begin="0.00" end="23.00" period="20.30">
+        <tranship from="Edge0" to="Edge2"/>
+    </containerFlow>
+    <containerFlow id="c_6" begin="0.00" end="23.00" period="exp(2.30)">
+        <tranship from="Edge0" to="Edge2"/>
+    </containerFlow>
+    <containerFlow id="c_7" begin="0.00" end="23.00" period="exp(1.70)">
+        <tranship from="Edge0" to="Edge2"/>
+    </containerFlow>
 </routes>

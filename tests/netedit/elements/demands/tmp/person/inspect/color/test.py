@@ -31,36 +31,36 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# create person using three edges
+# create container using three edges
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
-# press enter to create person
+# press enter to create container
 netedit.typeEnter()
 
 # go to inspect mode
 netedit.inspectMode()
 
-# inspect person
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.person)
+# inspect container
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.container)
 
 # change color using dialog
-netedit.modifyColorAttribute(netedit.attrs.person.inspect.colorButton, 5, False)
+netedit.modifyColorAttribute(netedit.attrs.container.inspect.colorButton, 5, False)
 
 # change color with an invalid value
-netedit.modifyAttribute(netedit.attrs.person.inspect.color, "", False)
+netedit.modifyAttribute(netedit.attrs.container.inspect.color, "", False)
 
 # change color with an invalid value
-netedit.modifyAttribute(netedit.attrs.person.inspect.color, "dummyColor", False)
+netedit.modifyAttribute(netedit.attrs.container.inspect.color, "dummyColor", False)
 
 # change color with an valid value
-netedit.modifyAttribute(netedit.attrs.person.inspect.color, "cyan", False)
+netedit.modifyAttribute(netedit.attrs.container.inspect.color, "cyan", False)
 
 # change color with a valid value
-netedit.modifyAttribute(netedit.attrs.person.inspect.color, "12,13,14", False)
+netedit.modifyAttribute(netedit.attrs.container.inspect.color, "12,13,14", False)
 
 # Check undo
 netedit.checkUndoRedo(referencePosition)
@@ -68,6 +68,6 @@ netedit.checkUndoRedo(referencePosition)
 # save Netedit config
 netedit.saveNeteditConfig(referencePosition)
 
-# save persons
+# save containers
 # quit netedit
 netedit.quit(neteditProcess)

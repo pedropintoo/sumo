@@ -31,33 +31,33 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# create person using three edges
+# create container using three edges
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
-# press enter to create person
+# press enter to create container
 netedit.typeEnter()
 
 # go to inspect mode
 netedit.inspectMode()
 
-# inspect person
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.person)
+# inspect container
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.container)
 
 # change ID with an invalid value
-netedit.modifyAttribute(netedit.attrs.person.inspect.type, ";;;;;", False)
+netedit.modifyAttribute(netedit.attrs.container.inspect.type, ";;;;;", False)
 
 # change ID with an invalid value
-netedit.modifyAttribute(netedit.attrs.person.inspect.type, "", False)
+netedit.modifyAttribute(netedit.attrs.container.inspect.type, "", False)
 
 # change ID with an invalid value
-netedit.modifyAttribute(netedit.attrs.person.inspect.type, "dummyType", False)
+netedit.modifyAttribute(netedit.attrs.container.inspect.type, "dummyType", False)
 
 # change ID with an invalid value
-netedit.modifyAttribute(netedit.attrs.person.inspect.type, "custom_vType", False)
+netedit.modifyAttribute(netedit.attrs.container.inspect.type, "custom_vType", False)
 
 # Check undo
 netedit.checkUndoRedo(referencePosition)
@@ -65,6 +65,6 @@ netedit.checkUndoRedo(referencePosition)
 # save Netedit config
 netedit.saveNeteditConfig(referencePosition)
 
-# save persons
+# save containers
 # quit netedit
 netedit.quit(neteditProcess)

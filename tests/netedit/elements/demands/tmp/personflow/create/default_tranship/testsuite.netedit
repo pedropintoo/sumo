@@ -1,15 +1,15 @@
-default_walk_fromto
+default_tranship_fromto
 
-default_walk_busstop
+default_tranship_busstop
 
-default_walk_trainstop
+default_tranship_trainstop
 
-default_walk_containerstop
+default_tranship_containerstop
 
-default_walk_chargingstation
+default_tranship_chargingstation
 
-default_walk_parkingarea
+default_tranship_parkingarea
 
-default_walk_edges
+default_tranship_edges
 
-default_walk_route
+default_tranship_route

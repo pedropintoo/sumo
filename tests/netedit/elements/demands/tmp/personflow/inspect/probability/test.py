@@ -31,42 +31,42 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change Person
-netedit.changeElement("personFlow")
+# change Container
+netedit.changeElement("containerFlow")
 
-# create person using three edges
+# create container using three edges
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
-# press enter to create person
+# press enter to create container
 netedit.typeEnter()
 
 # go to inspect mode
 netedit.inspectMode()
 
-# inspect person
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.person)
+# inspect container
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.container)
 
 # change flow value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspect.spacing, "dummyTerminate", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspect.spacing, "dummyTerminate", False)
 
 # change flow value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspect.spacing, "probability", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspect.spacing, "probability", False)
 
 # change flow value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspect.spacingOption, "dummy", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspect.spacingOption, "dummy", False)
 
 # change flow value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspect.spacingOption, "12.5", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspect.spacingOption, "12.5", False)
 
 # change flow value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspect.spacingOption, "26", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspect.spacingOption, "26", False)
 
 # change flow value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspect.spacingOption, "0.3", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspect.spacingOption, "0.3", False)
 
 # Check undo
 netedit.checkUndoRedo(referencePosition)
@@ -74,6 +74,6 @@ netedit.checkUndoRedo(referencePosition)
 # save Netedit config
 netedit.saveNeteditConfig(referencePosition)
 
-# save persons
+# save containers
 # quit netedit
 netedit.quit(neteditProcess)

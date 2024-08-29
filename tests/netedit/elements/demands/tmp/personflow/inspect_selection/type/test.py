@@ -40,20 +40,20 @@ netedit.selectionInvert()
 # go to inspect mode
 netedit.inspectMode()
 
-# inspect person
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.person)
+# inspect container
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.container)
 
 # change ID with an invalid value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspectSelection.type, ";;;;;", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspectSelection.type, ";;;;;", False)
 
 # change ID with an invalid value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspectSelection.type, "", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspectSelection.type, "", False)
 
 # change ID with an invalid value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspectSelection.type, "dummyType", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspectSelection.type, "dummyType", False)
 
 # change ID with an invalid value
-netedit.modifyAttribute(netedit.attrs.personFlow.inspectSelection.type, "typeC", False)
+netedit.modifyAttribute(netedit.attrs.containerFlow.inspectSelection.type, "typeC", False)
 
 # Check undo
 netedit.checkUndoRedo(referencePosition)
@@ -61,6 +61,6 @@ netedit.checkUndoRedo(referencePosition)
 # save Netedit config
 netedit.saveNeteditConfig(referencePosition)
 
-# save persons
+# save containers
 # quit netedit
 netedit.quit(neteditProcess)

@@ -31,37 +31,37 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change Person
-netedit.changeElement("personFlow")
+# change Container
+netedit.changeElement("containerFlow")
 
-# change person plan
-netedit.changePersonPlan("walk", True)
-
-# create route using edge and busStop
-netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
-
-# set invalid personFlow number
-netedit.changeColorUsingDialog(netedit.attrs.personFlow.create.colorButton, 5)
-
-# press enter to create route
-netedit.typeEnter()
-
-# set invalid personFlow number
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.color, "Vlue")
+# change container plan
+netedit.changeContainerPlan("tranship", True)
 
 # create route using edge and busStop
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 
+# set invalid containerFlow number
+netedit.changeColorUsingDialog(netedit.attrs.containerFlow.create.colorButton, 5)
+
 # press enter to create route
 netedit.typeEnter()
 
-# set invalid personFlow number
-netedit.changeDefaultValue(netedit.attrs.personFlow.create.color, "red")
+# set invalid containerFlow number
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.color, "Vlue")
+
+# create route using edge and busStop
+netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
+netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
+
+# press enter to create route
+netedit.typeEnter()
+
+# set invalid containerFlow number
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.color, "red")
 
 # press enter to create route
 netedit.typeEnter()

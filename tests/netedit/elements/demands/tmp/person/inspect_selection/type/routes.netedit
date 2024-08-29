@@ -8,11 +8,11 @@
     <vType id="typeA" length="20.00" width="5.00" height="12.00" color="cyan"/>
     <vType id="typeB" length="20.00" width="5.00" height="12.00" color="cyan"/>
     <vType id="typeC" length="20.00" width="5.00" height="12.00" color="cyan"/>
-    <!-- Vehicles, persons and containers (sorted by depart) -->
-    <person id="p_0" type="typeC" depart="10.00" departPos="0.00" color="red">
-        <personTrip from="Edge0" to="Edge2"/>
-    </person>
-    <person id="p_1" type="typeC" depart="12.00" departPos="11.00" color="blue">
-        <personTrip from="Edge1" to="Edge2"/>
-    </person>
+    <!-- Vehicles, containers and containers (sorted by depart) -->
+    <container id="c_0" type="typeC" depart="10.00" departPos="0.00" color="red">
+        <tranship from="Edge0" to="Edge2"/>
+    </container>
+    <container id="c_1" type="typeC" depart="12.00" departPos="11.00" color="blue">
+        <tranship from="Edge1" to="Edge2"/>
+    </container>
 </routes>

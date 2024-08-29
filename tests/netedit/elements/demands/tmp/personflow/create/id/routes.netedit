@@ -4,11 +4,11 @@
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <!-- Vehicles, persons and containers (sorted by depart) -->
-    <personFlow id="customID" begin="0.00" end="3600.00" personsPerHour="1800">
-        <walk from="Edge0" busStop="busStopA"/>
-    </personFlow>
-    <personFlow id="pf_0" begin="0.00" end="3600.00" personsPerHour="1800">
-        <walk from="Edge0" busStop="busStopA"/>
-    </personFlow>
+    <!-- Vehicles, containers and containers (sorted by depart) -->
+    <containerFlow id="customID" begin="0.00" end="3600.00" containersPerHour="1800">
+        <tranship from="Edge0" busStop="busStopA"/>
+    </containerFlow>
+    <containerFlow id="cf_0" begin="0.00" end="3600.00" containersPerHour="1800">
+        <tranship from="Edge0" busStop="busStopA"/>
+    </containerFlow>
 </routes>

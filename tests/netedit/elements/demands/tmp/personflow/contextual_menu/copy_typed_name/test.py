@@ -31,24 +31,24 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 # go to demand mode
 netedit.supermodeDemand()
 
-# go to person mode
-netedit.personMode()
+# go to container mode
+netedit.containerMode()
 
-# change Person
-netedit.changeElement("personFlow")
+# change Container
+netedit.changeElement("containerFlow")
 
-# create person using three edges
+# create container using three edges
 netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
 netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
-# press enter to create person
+# press enter to create container
 netedit.typeEnter()
 
 # go to inspect mode
 netedit.inspectMode()
 
 # copy typed name
-netedit.contextualMenuOperation(referencePosition, netedit.positions.elements.demands.person,
+netedit.contextualMenuOperation(referencePosition, netedit.positions.elements.demands.container,
                                 netedit.contextualMenu.vehicles.copyTypedName)
 
 # Check undos

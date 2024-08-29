@@ -1,1 +1,1 @@
-Warning: Person 'p_3' receives type 'customType' which implicitly uses unsuitable vClass 'passenger'.
+Warning: Container 'p_3' receives type 'customType' which implicitly uses unsuitable vClass 'passenger'.

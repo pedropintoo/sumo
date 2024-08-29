@@ -4,17 +4,17 @@
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <!-- Vehicles, persons and containers (sorted by depart) -->
-    <person id="p_0" depart="0.00">
-        <personTrip from="EdgeExternBot" to="EdgeExternTop"/>
-    </person>
-    <person id="p_1" depart="0.00">
-        <walk from="EdgeExternTop" to="EdgeExternBot"/>
-    </person>
-    <person id="p_2" depart="0.00">
-        <walk from="Edge0" to="EdgeCenter1"/>
-    </person>
-    <person id="p_3" depart="0.00">
-        <personTrip from="EdgeCenter1" to="Edge5"/>
-    </person>
+    <!-- Vehicles, containers and containers (sorted by depart) -->
+    <container id="c_0" depart="0.00">
+        <tranship from="EdgeExternBot" to="EdgeExternTop"/>
+    </container>
+    <container id="c_1" depart="0.00">
+        <tranship from="EdgeExternTop" to="EdgeExternBot"/>
+    </container>
+    <container id="c_2" depart="0.00">
+        <tranship from="Edge0" to="EdgeCenter1"/>
+    </container>
+    <container id="c_3" depart="0.00">
+        <tranship from="EdgeCenter1" to="Edge5"/>
+    </container>
 </routes>
