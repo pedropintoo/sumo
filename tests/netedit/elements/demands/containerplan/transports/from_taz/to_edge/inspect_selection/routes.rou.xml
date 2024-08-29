@@ -10,12 +10,12 @@
     <vType id="customType"/>
     <!-- Vehicles, persons and containers (sorted by depart) -->
     <container id="c_0" depart="0.00">
-        <walk from="Edge0" toTaz="taz_red"/>
+        <tranship from="Edge0" toTaz="taz_red"/>
         <transport to="Edge2" arrivalPos="25.00" modes="public" lines="Line1" vTypes="type1"/>
     </container>
 
     <container id="c_1" depart="0.00">
-        <walk from="EdgeBike0" toTaz="taz_green"/>
+        <tranship from="EdgeBike0" toTaz="taz_green"/>
         <transport to="Edge5" arrivalPos="11.00" modes="car" lines="Line2" vTypes="type2"/>
     </container>
 </routes>
