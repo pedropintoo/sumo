@@ -577,11 +577,10 @@ MSDevice_Taxi::cancelCustomer(const MSTransportable* t) {
             fulfilled = true;
         }
         if (fulfilled) {
-            // delete the reservation
-            myDispatcher->fulfilledReservation(*resIt);
+            const Reservation* res = *resIt;
             // remove reservation from the current dispatch
             for (auto it = myLastDispatch.begin(); it != myLastDispatch.end();) {
-                if (*it == *resIt) {
+                if (*it == res) {
                     it = myLastDispatch.erase(it);
                 } else {
                     ++it;
@@ -589,6 +588,8 @@ MSDevice_Taxi::cancelCustomer(const MSTransportable* t) {
             }
             // remove reservation from the served reservations
             resIt = myCurrentReservations.erase(resIt);
+            // delete the reservation
+            myDispatcher->fulfilledReservation(res);
         } else {
             ++resIt;
         }
@@ -598,6 +599,14 @@ MSDevice_Taxi::cancelCustomer(const MSTransportable* t) {
         // if there is another pickup in the dispatch left, add the state PICKUP
         if (std::count(myLastDispatch.begin(), myLastDispatch.end(), res) == 2) {
             myState |= PICKUP;  // add state PICKUP
+        }
+    }
+    // we also have to clean reservations from myLastDispatch where the customers arrived in the meantime
+    for (auto it = myLastDispatch.begin(); it != myLastDispatch.end();) {
+        if (myCurrentReservations.count(*it) == 0) {
+            it = myLastDispatch.erase(it);
+        } else {
+            ++it;
         }
     }
     // if there are reservations left, go on with the dispatch

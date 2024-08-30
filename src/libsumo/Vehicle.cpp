@@ -54,7 +54,7 @@
 #include "Vehicle.h"
 
 #define CALL_MICRO_FUN(veh, fun, mesoResult) ((dynamic_cast<MSVehicle*>(veh) == nullptr ? (mesoResult) : dynamic_cast<MSVehicle*>(veh)->fun))
-
+#define CALL_MESO_FUN(veh, fun, microResult) ((dynamic_cast<MEVehicle*>(veh) == nullptr ? (microResult) : dynamic_cast<MEVehicle*>(veh)->fun))
 
 // ===========================================================================
 // debug defines
@@ -182,9 +182,30 @@ Vehicle::getLaneID(const std::string& vehID) {
 int
 Vehicle::getLaneIndex(const std::string& vehID) {
     MSBaseVehicle* veh = Helper::getVehicle(vehID);
-    return veh->isOnRoad() ? CALL_MICRO_FUN(veh, getLane()->getIndex(), INVALID_INT_VALUE) : INVALID_INT_VALUE;
+    if (veh->isOnRoad()) {
+        MSVehicle* microVeh = dynamic_cast<MSVehicle*>(veh);
+        if (microVeh != nullptr) {
+            return microVeh->getLane()->getIndex();
+        } else {
+            MEVehicle* mesoVeh = dynamic_cast<MEVehicle*>(veh);
+            return mesoVeh->getQueIndex();
+        }
+    } else {
+        return INVALID_INT_VALUE;
+    }
 }
 
+std::string
+Vehicle::getSegmentID(const std::string& vehID) {
+    MSBaseVehicle* veh = Helper::getVehicle(vehID);
+    return veh->isOnRoad() ? CALL_MESO_FUN(veh, getSegment()->getID(), "") : "";
+}
+
+int
+Vehicle::getSegmentIndex(const std::string& vehID) {
+    MSBaseVehicle* veh = Helper::getVehicle(vehID);
+    return veh->isOnRoad()? CALL_MESO_FUN(veh, getSegment()->getIndex(), INVALID_INT_VALUE): INVALID_INT_VALUE;
+}
 
 std::string
 Vehicle::getTypeID(const std::string& vehID) {
@@ -701,9 +722,11 @@ Vehicle::getDrivingDistance2D(const std::string& vehID, double x, double y) {
         return INVALID_DOUBLE_VALUE;
     }
     if (veh->isOnRoad()) {
+        MSVehicle* microVeh = dynamic_cast<MSVehicle*>(veh);
+        const MSLane* lane = microVeh != nullptr ? veh->getLane() : veh->getEdge()->getLanes()[0];
         std::pair<MSLane*, double> roadPos = Helper::convertCartesianToRoadMap(Position(x, y), veh->getVehicleType().getVehicleClass());
         double distance = veh->getRoute().getDistanceBetween(veh->getPositionOnLane(), roadPos.second,
-                          veh->getLane(), roadPos.first, veh->getRoutePosition());
+                          lane, roadPos.first, veh->getRoutePosition());
         if (distance == std::numeric_limits<double>::max()) {
             return INVALID_DOUBLE_VALUE;
         }
@@ -2808,6 +2831,10 @@ Vehicle::handleVariable(const std::string& objID, const int variable, VariableWr
             return wrapper->wrapString(objID, variable, getLaneID(objID));
         case VAR_LANE_INDEX:
             return wrapper->wrapInt(objID, variable, getLaneIndex(objID));
+        case VAR_SEGMENT_ID:
+            return wrapper->wrapString(objID, variable, getSegmentID(objID));
+        case VAR_SEGMENT_INDEX:
+            return wrapper->wrapInt(objID, variable, getSegmentIndex(objID));
         case VAR_TYPE:
             return wrapper->wrapString(objID, variable, getTypeID(objID));
         case VAR_ROUTE_ID:

@@ -1407,12 +1407,16 @@ MSVehicle::validatePosition(Position result, double offset) const {
 ConstMSEdgeVector::const_iterator
 MSVehicle::getRerouteOrigin() const {
     // too close to the next junction, so avoid an emergency brake here
-    if (myLane != nullptr && (myCurrEdge + 1) != myRoute->end() &&
-            myState.myPos > myLane->getLength() - getCarFollowModel().brakeGap(myState.mySpeed, getCarFollowModel().getMaxDecel(), 0.)) {
-        return myCurrEdge + 1;
-    }
-    if (myLane != nullptr) {
-        return myLane->isInternal() || myLane->getEdge().hasChangeProhibitions(getVClass(), myLane->getIndex()) ? myCurrEdge + 1 : myCurrEdge;
+    if (myLane != nullptr && (myCurrEdge + 1) != myRoute->end()) {
+        if (myLane->isInternal()) {
+            return myCurrEdge + 1;
+        }
+        if (myState.myPos > myLane->getLength() - getCarFollowModel().brakeGap(myState.mySpeed, getCarFollowModel().getMaxDecel(), 0.)) {
+            return myCurrEdge + 1;
+        }
+        if (myLane->getEdge().hasChangeProhibitions(getVClass(), myLane->getIndex())) {
+            return myCurrEdge + 1;
+        }
     }
     return myCurrEdge;
 }
@@ -6970,7 +6974,8 @@ MSVehicle::unsafeLinkAhead(const MSLane* lane) const {
 PositionVector
 MSVehicle::getBoundingBox(double offset) const {
     PositionVector centerLine;
-    centerLine.push_back(getPosition());
+    Position pos = getPosition();
+    centerLine.push_back(pos);
     switch (myType->getGuiShape()) {
         case SUMOVehicleShape::BUS_FLEXIBLE:
         case SUMOVehicleShape::RAIL:
@@ -6986,7 +6991,14 @@ MSVehicle::getBoundingBox(double offset) const {
         default:
             break;
     }
-    centerLine.push_back(getBackPosition());
+    double l = getLength();
+    Position backPos = getBackPosition();
+    if (pos.distanceTo2D(backPos) > l + NUMERICAL_EPS) {
+        // getBackPosition may not match the visual back in networks without internal lanes
+        double a = getAngle() + M_PI; // angle pointing backwards
+        backPos = pos + Position(l * cos(a), l * sin(a));
+    }
+    centerLine.push_back(backPos);
     if (offset != 0) {
         centerLine.extrapolate2D(offset);
     }
