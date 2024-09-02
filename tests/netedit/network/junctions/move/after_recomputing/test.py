@@ -32,34 +32,15 @@ netedit.rebuildNetwork()
 # Change to move
 netedit.moveMode()
 
-# move single edge junctions
-netedit.dragDrop(referencePosition, 190, 50, 45, 50)
-netedit.dragDrop(referencePosition, 806, 51, 932, 116)
-
-# move double edge junctions
-netedit.dragDrop(referencePosition, 187, 297, 187, 421)
-
-# move center
-netedit.dragDrop(referencePosition, 620, 300, 932, 363)
-
 # rebuild network
 netedit.rebuildNetwork()
 
-# Check undo
-netedit.undo(referencePosition, 5)
+# move
+netedit.moveElement(referencePosition, netedit.positions.network.junction.cross.center,
+                    netedit.positions.elements.movementRadius)
 
-# Change to move
-netedit.moveMode()
-
-# move single edge junctions
-netedit.dragDrop(referencePosition, 190, 50, 45, 50)
-netedit.dragDrop(referencePosition, 806, 51, 932, 116)
-
-# move double edge junctions
-netedit.dragDrop(referencePosition, 187, 297, 187, 421)
-
-# move center
-netedit.dragDrop(referencePosition, 620, 300, 932, 363)
+# rebuild network
+netedit.rebuildNetwork()
 
 # Check undo
 netedit.undo(referencePosition, 5)
