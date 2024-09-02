@@ -101,19 +101,11 @@ netedit.typeEnter()
 # set valid arrival pos
 netedit.changeDefaultValue(netedit.attrs.personFlow.create.number, "20.5")
 
-# create flow with embedded route
-netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
-
 # press enter to create flow with embedded route
 netedit.typeEnter()
 
 # set valid arrival pos
 netedit.changeDefaultValue(netedit.attrs.personFlow.create.number, "51")
-
-# create flow with embedded route
-netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 
 # press enter to create flow with embedded route
 netedit.typeEnter()

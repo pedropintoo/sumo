@@ -75,45 +75,11 @@ netedit.typeEnter()
 # set valid arrival pos
 netedit.changeDefaultValue(netedit.attrs.containerFlow.create.end, "20.5")
 
-# create flow with embedded route
-netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
-
-# press enter to create flow with embedded route
-netedit.typeEnter()
-
-# set valid arrival pos
-netedit.changeDefaultValue(netedit.attrs.containerFlow.create.number, "dummy")
-
-# create flow with embedded route
-netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
-
-# press enter to create flow with embedded route
-netedit.typeEnter()
-
-# set valid arrival pos
-netedit.changeDefaultValue(netedit.attrs.containerFlow.create.number, "-30")
-
-# press enter to create flow with embedded route
-netedit.typeEnter()
-
-# set valid arrival pos
-netedit.changeDefaultValue(netedit.attrs.containerFlow.create.number, "20.5")
-
-# create flow with embedded route
-netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
-
 # press enter to create flow with embedded route
 netedit.typeEnter()
 
 # set valid arrival pos
 netedit.changeDefaultValue(netedit.attrs.containerFlow.create.number, "51")
-
-# create flow with embedded route
-netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 
 # press enter to create flow with embedded route
 netedit.typeEnter()
