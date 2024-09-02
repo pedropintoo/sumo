@@ -3532,8 +3532,7 @@ class transport:
 
         class busStop:
             class create:
-                arrivalPos = 8
-                lines = 9
+                lines = 8
 
             class inspect:
                 lines = 1
@@ -3543,8 +3542,7 @@ class transport:
 
         class junction:
             class create:
-                arrivalPos = 8
-                lines = 9
+                lines = 8
 
             class inspect:
                 lines = 1
@@ -3568,8 +3566,7 @@ class transport:
 
         class busStop:
             class create:
-                arrivalPos = 8
-                lines = 9
+                lines = 8
 
             class inspect:
                 lines = 1
@@ -3579,8 +3576,7 @@ class transport:
 
         class junction:
             class create:
-                arrivalPos = 8
-                lines = 9
+                lines = 8
 
             class inspect:
                 lines = 1
@@ -3604,8 +3600,7 @@ class transport:
 
         class busStop:
             class create:
-                arrivalPos = 8
-                lines = 9
+                lines = 8
 
             class inspect:
                 lines = 1
@@ -3615,8 +3610,7 @@ class transport:
 
         class junction:
             class create:
-                arrivalPos = 8
-                lines = 9
+                lines = 8
 
             class inspect:
                 lines = 1
@@ -3628,13 +3622,16 @@ class tranship:
     class edge:
         class edge:
             class create:
-                speed = 8
+                arrivalPos = 8
+                speed = 9
 
             class inspect:
-                speed = 1
+                arrivalPos = 1
+                speed = 2
 
             class inspectSelection:
-                speed = 1
+                arrivalPos = 1
+                speed = 2
 
         class busStop:
             class create:
@@ -3693,13 +3690,16 @@ class tranship:
     class junction:
         class edge:
             class create:
-                speed = 8
+                arrivalPos = 8
+                speed = 9
 
             class inspect:
-                speed = 1
+                arrivalPos = 1
+                speed = 2
 
             class inspectSelection:
-                speed = 1
+                arrivalPos = 1
+                speed = 2
 
         class busStop:
             class create:
