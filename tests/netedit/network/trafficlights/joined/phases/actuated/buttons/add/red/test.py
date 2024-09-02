@@ -32,7 +32,7 @@ neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
 netedit.selectTLSMode()
 
 # select junction
-netedit.leftClick(referencePosition, 500, 225)
+netedit.leftClick(referencePosition, netedit.positions.network.junction.cross.center)
 
 # add phase
 netedit.addRedPhase(netedit.attrs.TLS.join.actuatedPhase.addButton)
