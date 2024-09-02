@@ -27,6 +27,7 @@ import neteditTestFunctions as netedit  # noqa
 
 # Open netedit
 neteditProcess, referencePosition = netedit.setupAndStart(neteditTestRoot)
+netedit.rebuildNetwork()
 
 # Change to move
 netedit.moveMode()
