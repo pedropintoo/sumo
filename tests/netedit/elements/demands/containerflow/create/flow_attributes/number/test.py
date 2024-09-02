@@ -56,12 +56,12 @@ netedit.changeDefaultValue(netedit.attrs.containerFlow.create.terminate, "number
 # press enter to create route
 netedit.typeEnter()
 
-# create route using edge and busStop
-netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
-netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
-
 # set valid arrival pos
 netedit.changeDefaultValue(netedit.attrs.containerFlow.create.terminateOption, "dummy")
+
+# create flow
+netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
+netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
 # press enter to create route
 netedit.typeEnter()

@@ -51,7 +51,7 @@ netedit.leftClick(referencePosition, netedit.positions.elements.demands.busStop)
 netedit.typeEnter()
 
 # set invalid arrival pos
-netedit.changeDefaultValue(netedit.attrs.containerFlow.create.spacing, "period")
+netedit.changeDefaultValue(netedit.attrs.containerFlow.create.spacing, "containersPerHour")
 
 # press enter to create flow
 netedit.typeEnter()
@@ -80,6 +80,10 @@ netedit.typeEnter()
 
 # set valid arrival pos
 netedit.changeDefaultValue(netedit.attrs.containerFlow.create.spacingOption, "22")
+
+# create flow
+netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
+netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
 
 # press enter to create route
 netedit.typeEnter()
