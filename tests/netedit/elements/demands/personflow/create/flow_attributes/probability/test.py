@@ -81,6 +81,10 @@ netedit.typeEnter()
 # set valid arrival pos
 netedit.changeDefaultValue(netedit.attrs.personFlow.create.spacingOption, "22")
 
+# create flow
+netedit.leftClick(referencePosition, netedit.positions.elements.edge0)
+netedit.leftClick(referencePosition, netedit.positions.elements.edge2)
+
 # press enter to create route
 netedit.typeEnter()
 
