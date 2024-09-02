@@ -3628,21 +3628,17 @@ class tranship:
     class edge:
         class edge:
             class create:
-                arrivalPos = 8
-                speed = 9
+                speed = 8
 
             class inspect:
-                arrivalPos = 1
-                speed = 2
+                speed = 1
 
             class inspectSelection:
-                arrivalPos = 1
-                speed = 2
+                speed = 1
 
         class busStop:
             class create:
-                arrivalPos = 8
-                speed = 9
+                speed = 8
 
             class inspect:
                 speed = 1
@@ -3652,8 +3648,7 @@ class tranship:
 
         class junction:
             class create:
-                arrivalPos = 8
-                speed = 9
+                speed = 8
 
             class inspect:
                 speed = 1
@@ -3677,8 +3672,7 @@ class tranship:
 
         class busStop:
             class create:
-                arrivalPos = 8
-                speed = 9
+                speed = 8
 
             class inspect:
                 speed = 1
@@ -3688,8 +3682,7 @@ class tranship:
 
         class junction:
             class create:
-                arrivalPos = 8
-                speed = 9
+                speed = 8
 
             class inspect:
                 speed = 1
@@ -3700,21 +3693,17 @@ class tranship:
     class junction:
         class edge:
             class create:
-                arrivalPos = 8
-                speed = 9
+                speed = 8
 
             class inspect:
-                arrivalPos = 1
-                speed = 2
+                speed = 1
 
             class inspectSelection:
-                arrivalPos = 1
-                speed = 2
+                speed = 1
 
         class busStop:
             class create:
-                arrivalPos = 8
-                speed = 9
+                speed = 8
 
             class inspect:
                 speed = 1
@@ -3724,8 +3713,7 @@ class tranship:
 
         class junction:
             class create:
-                arrivalPos = 8
-                speed = 9
+                speed = 8
 
             class inspect:
                 speed = 1
