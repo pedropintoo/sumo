@@ -853,7 +853,7 @@ MSLink::opened(SUMOTime arrivalTime, double arrivalSpeed, double leaveSpeed, dou
         // sublane model could have detected a conflict
         return collectFoes == nullptr || collectFoes->size() == 0;
     }
-    if (myState == LINKSTATE_ALLWAY_STOP && waitingTime == 0) {
+    if (myState == LINKSTATE_ALLWAY_STOP && waitingTime < TIME2STEPS(ego->getVehicleType().getParameter().getJMParam(SUMO_ATTR_JM_ALLWAYSTOP_WAIT, TS))) {
         return false;
     } else if (myState == LINKSTATE_STOP && waitingTime < TIME2STEPS(ego->getVehicleType().getParameter().getJMParam(SUMO_ATTR_JM_STOPSIGN_WAIT, TS))) {
         return false;
@@ -983,10 +983,23 @@ MSLink::blockedByFoe(const SUMOVehicle* veh, const ApproachingVehicleInformation
     }
     if (myState == LINKSTATE_ALLWAY_STOP) {
         assert(waitingTime > 0);
-        if (waitingTime > avi.waitingTime) {
+#ifdef MSLink_DEBUG_OPENED
+        if (gDebugFlag1) {
+            std::stringstream stream; // to reduce output interleaving from different threads
+            stream << "    foeDist=" << avi.dist
+                << " foeBGap=" << veh->getBrakeGap(false)
+                << " foeWait=" << avi.waitingTime
+                << " wait=" << waitingTime
+                << "\n";
+            std::cout << stream.str();
+        }
+#endif
+        // when using actionSteps, the foe waiting time may be outdated
+        const SUMOTime actionDelta = SIMSTEP - veh->getLastActionTime();
+        if (waitingTime > avi.waitingTime + actionDelta) {
             return false;
         }
-        if (waitingTime == avi.waitingTime && arrivalTime < avi.arrivalTime) {
+        if (waitingTime == (avi.waitingTime + actionDelta) && arrivalTime < avi.arrivalTime + actionDelta) {
             return false;
         }
     }

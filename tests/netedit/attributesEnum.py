@@ -3532,7 +3532,8 @@ class transport:
 
         class busStop:
             class create:
-                lines = 8
+                arrivalPos = 8
+                lines = 9
 
             class inspect:
                 lines = 1
@@ -3542,7 +3543,8 @@ class transport:
 
         class junction:
             class create:
-                lines = 8
+                arrivalPos = 8
+                lines = 9
 
             class inspect:
                 lines = 1
@@ -3566,7 +3568,8 @@ class transport:
 
         class busStop:
             class create:
-                lines = 8
+                arrivalPos = 8
+                lines = 9
 
             class inspect:
                 lines = 1
@@ -3576,7 +3579,8 @@ class transport:
 
         class junction:
             class create:
-                lines = 8
+                arrivalPos = 8
+                lines = 9
 
             class inspect:
                 lines = 1
@@ -3600,7 +3604,8 @@ class transport:
 
         class busStop:
             class create:
-                lines = 8
+                arrivalPos = 8
+                lines = 9
 
             class inspect:
                 lines = 1
@@ -3610,7 +3615,8 @@ class transport:
 
         class junction:
             class create:
-                lines = 8
+                arrivalPos = 8
+                lines = 9
 
             class inspect:
                 lines = 1
@@ -3635,7 +3641,8 @@ class tranship:
 
         class busStop:
             class create:
-                speed = 8
+                arrivalPos = 8
+                speed = 9
 
             class inspect:
                 speed = 1
@@ -3645,7 +3652,8 @@ class tranship:
 
         class junction:
             class create:
-                speed = 8
+                arrivalPos = 8
+                speed = 9
 
             class inspect:
                 speed = 1
@@ -3669,7 +3677,8 @@ class tranship:
 
         class busStop:
             class create:
-                speed = 8
+                arrivalPos = 8
+                speed = 9
 
             class inspect:
                 speed = 1
@@ -3703,7 +3712,8 @@ class tranship:
 
         class busStop:
             class create:
-                speed = 8
+                arrivalPos = 8
+                speed = 9
 
             class inspect:
                 speed = 1
@@ -3713,7 +3723,8 @@ class tranship:
 
         class junction:
             class create:
-                speed = 8
+                arrivalPos = 8
+                speed = 9
 
             class inspect:
                 speed = 1
